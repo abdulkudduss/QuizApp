@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/black"
+    >
+<TextView
+    android:id="@+id/rules_TextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/orange"
+    android:textSize="18dp"
+/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+
+
+    >
+       <Button
+           android:id="@+id/btnNum1"
+           android:tag="1"
+           android:layout_width="60dp"
+           android:layout_height="wrap_content"
+           android:textColor="@color/black"
+           android:text="@string/btnNum1"
+           android:backgroundTint="@color/orange"
+           android:layout_margin="2dp"
+           android:textSize="12dp"
+           />
+        <Button
+            android:id="@+id/btnNum2"
+            android:tag="2"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/btnNum2"
+            android:backgroundTint="@color/orange"
+            android:layout_margin="2dp"
+            android:textSize="12dp"
+
+            />
+        <Button
+
+            android:id="@+id/btnNum3"
+            android:tag="3"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/btnNum3"
+            android:backgroundTint="@color/orange"
+            android:layout_margin="2dp"
+            android:textSize="12dp"
+            />
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        >
+        <Button
+            android:id="@+id/btnNum4"
+            android:tag="4"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/btnNum4"
+            android:backgroundTint="@color/orange"
+            android:layout_margin="2dp"
+            />
+        <Button
+            android:id="@+id/btnNum5"
+            android:tag="5"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/btnNum5"
+            android:backgroundTint="@color/orange"
+            android:layout_margin="2dp"
+            />
+        <Button
+            android:id="@+id/btnNum6"
+            android:tag="6"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/btnNum6"
+            android:backgroundTint="@color/orange"
+            android:layout_margin="2dp"
+
+            />
+
+
+
+
+    </LinearLayout>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/next_Button"
+        android:src="@drawable/arrow_right"
+        />
+
+<!--
+    <Button
+        android:id="@+id/next_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"/>
+        -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        />
+<Button
+    android:id="@+id/btnDev"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:text="@string/btnDevelopers"
+    android:textColor="@color/orange"
+    android:backgroundTint="@color/white"
+/>
+    <Button
+        android:id="@+id/btnHelp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btnHelp"
+        android:textColor="@color/orange"
+        android:backgroundTint="@color/white"
+/>
+
+
+
+
+
+</LinearLayout>
+
