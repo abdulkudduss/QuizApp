@@ -3,6 +3,7 @@ package com.example.quiz_lb1_v6;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -14,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btnNext;
     private int [] primeNum = new int[6];
     private  TextView tvQuestion;
+    private final String KEY_INDEX="index";
+    private final String TAG="MainActivity";
    Questions[] questionArray = new Questions[]{
            new Questions(R.string.tvQuestion1,true,false,true,true,false,true),
            new Questions(R.string.tvQuestion2,true,false,false,true,false,true),
@@ -47,10 +50,23 @@ public class MainActivity extends AppCompatActivity {
 
     }
     @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        Log.i(TAG, "onSaveInstanceState"); //запись в журнал
+        savedInstanceState.putInt(KEY_INDEX, questIndex); //сохранить пару
+        // «ключ-значение»
+        // в объекте
+        // saveInstanceState
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         tvQuestion = findViewById(R.id.rules_TextView);
+        if(savedInstanceState!=null){
+            questIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+        }
         updateQuestion();
         btnNext = findViewById(R.id.next_Button);
         btnDev = findViewById(R.id.btnDev);
