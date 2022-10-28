@@ -4,7 +4,6 @@
     <string name="btnDevelopers">Разработчики</string>
     <string name="btnHelp">Помощь</string>
     <string name="tstDev">Патеев,Егоркин,Имаров</string>
-    <string name="tstHelp">Просто́е число́ — натуральное число, имеющее ровно два различных натуральных делителя — и самого себя. Другими словами, число x является простым, если оно больше 1 и при этом делится без остатка только на 1 и на x. К примеру, 5 — простое число, а 6 является составным числом, так как, помимо 1 и 6, также делится на 2 и на 3</string>
     <string name="tstTrue">Правильно!</string>
     <string name="tstFalse">Неправильно!</string>
     <string name="btnNum1">3</string>
@@ -16,4 +15,10 @@
     <string name="tvQuestion1">Укажи простое число</string>
     <string name="tvQuestion2">Найди чисел которые меньше 7</string>
     <string name="tvQuestion3">Найди четные число</string>
+    <string name="help_message">Вы уверены, что не справитесь самостоятельно?</string>
+    <string name="advice">В следующий раз попробуйте ответить самостоятельно</string>
+    <string name="help1">Просто́е число́ — натуральное число, имеющее ровно два различных натуральных делителя — и самого себя. Другими словами, число x является простым, если оно больше 1 и при этом делится без остатка только на 1 и на x. К примеру, 5 — простое число, а 6 является составным числом, так как, помимо 1 и 6, также делится на 2 и на 3</string>
+    <string name="helpOn">Вкл кнопку</string>
+    <string name="helpOff">Выкл кнопку</string>
+    <string name="nextbutton">След</string>
 </resources>

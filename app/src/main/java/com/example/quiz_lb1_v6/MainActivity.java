@@ -1,9 +1,14 @@
 package com.example.quiz_lb1_v6;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -16,7 +21,10 @@ public class MainActivity extends AppCompatActivity {
     private int [] primeNum = new int[6];
     private  TextView tvQuestion;
     private final String KEY_INDEX="index";
+    private final String KEY_isHlp="hlp";
     private final String TAG="MainActivity";
+    private boolean isHlpUsd;
+    boolean arrAns[]={false,false,false,false};
    Questions[] questionArray = new Questions[]{
            new Questions(R.string.tvQuestion1,true,false,true,true,false,true),
            new Questions(R.string.tvQuestion2,true,false,false,true,false,true),
@@ -47,8 +55,29 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Toast.makeText(this,mResId,Toast.LENGTH_SHORT).show();
-
+        if(isHlpUsd){
+            Toast.makeText(this,R.string.advice,Toast.LENGTH_SHORT).show();
+            isHlpUsd=false;
+        }
     }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
+        getMenuInflater().inflate(R.menu.menu12,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id=item.getItemId();
+        switch (id){
+            case R.id.hlpOn:findViewById(R.id.btnHelp).setEnabled(true);return true;
+            case R.id.hlpOff:findViewById(R.id.btnHelp).setEnabled(false);return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
@@ -57,7 +86,17 @@ public class MainActivity extends AppCompatActivity {
         // «ключ-значение»
         // в объекте
         // saveInstanceState
+        savedInstanceState.putBoolean(KEY_isHlp,isHlpUsd);
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(data==null) return;
+        isHlpUsd=data.getBooleanExtra(HelpActivity.EXTRA_HELP_WAS_USED,false);
+        arrAns[data.getIntExtra(HelpActivity.EXTRA_KEY,questIndex)]=true;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         tvQuestion = findViewById(R.id.rules_TextView);
         if(savedInstanceState!=null){
             questIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+            isHlpUsd=savedInstanceState.getBoolean(KEY_isHlp);
         }
         updateQuestion();
         btnNext = findViewById(R.id.next_Button);
@@ -90,9 +130,11 @@ public class MainActivity extends AppCompatActivity {
         btnHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,
-                        R.string.tstHelp,
-                        Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this,HelpActivity.class);
+                intent.putExtra(HelpActivity.EXTRA_INDEX_OF_QUESTION,questIndex);
+                startActivityForResult(intent,7);
+
+
             }
         });
 
@@ -136,9 +178,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 questIndex = (questIndex+1) % questionArray.length;
+                isHlpUsd=arrAns[questIndex];
                 updateQuestion();
             }
         });
+
     }
 
 }

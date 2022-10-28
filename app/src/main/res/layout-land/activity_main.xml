@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@color/black"
     >
 <TextView
     android:id="@+id/rules_TextView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:textColor="@color/aqua"
-    android:textSize="18dp"
-/>
+    android:textSize="24dp"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:layout_marginBottom="110dp"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
-
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginBottom="95dp"
 
     >
        <Button
            android:id="@+id/btnNum1"
            android:tag="1"
-           android:layout_width="60dp"
+           android:layout_width="65dp"
            android:layout_height="wrap_content"
            android:textColor="@color/black"
            android:text="@string/btnNum1"
@@ -38,7 +36,7 @@
         <Button
             android:id="@+id/btnNum2"
             android:tag="2"
-            android:layout_width="60dp"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="@string/btnNum2"
@@ -51,7 +49,7 @@
 
             android:id="@+id/btnNum3"
             android:tag="3"
-            android:layout_width="60dp"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="@string/btnNum3"
@@ -71,11 +69,14 @@
         android:layout_marginBottom="20dp"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="5dp"
+
         >
         <Button
             android:id="@+id/btnNum4"
             android:tag="4"
-            android:layout_width="60dp"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="@string/btnNum4"
@@ -85,7 +86,7 @@
         <Button
             android:id="@+id/btnNum5"
             android:tag="5"
-            android:layout_width="60dp"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="@string/btnNum5"
@@ -95,7 +96,7 @@
         <Button
             android:id="@+id/btnNum6"
             android:tag="6"
-            android:layout_width="60dp"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="@string/btnNum6"
@@ -109,14 +110,7 @@
 
     </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/next_Button"
-        android:layout_width="82dp"
-        android:layout_height="63dp"
-        android:src="@drawable/arrow_right"
-        />
-
-<!--
+    <!--
     <Button
         android:id="@+id/next_Button"
         android:layout_width="wrap_content"
@@ -124,31 +118,36 @@
         android:text="Next"/>
         -->
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btnDev"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        />
-<Button
-    android:id="@+id/btnDev"
-    android:layout_width="200dp"
-    android:layout_height="wrap_content"
-    android:text="@string/btnDevelopers"
-    android:textColor="@color/aqua"
-    android:backgroundTint="@color/white"
-/>
+        android:backgroundTint="@color/white"
+        android:text="@string/btnDevelopers"
+        android:textColor="@color/aqua"
+        android:layout_gravity="center_vertical|bottom|center_horizontal"
+        android:layout_marginBottom="10dp"/>
+
     <Button
         android:id="@+id/btnHelp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
         android:text="@string/btnHelp"
         android:textColor="@color/aqua"
-        android:backgroundTint="@color/white"
-/>
+        android:layout_gravity="center_vertical|center_horizontal|bottom"
+        android:layout_marginBottom="60dp"/>
+
+    <ImageButton
+        android:id="@+id/next_Button"
+        android:layout_width="124dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/arrow_right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="23dp"
+        android:contentDescription="@string/nextbutton"/>
 
 
-
-
-
-</LinearLayout>
+</FrameLayout>
 

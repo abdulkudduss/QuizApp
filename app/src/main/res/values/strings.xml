@@ -5,7 +5,19 @@
     <string name="tvQuestion3">Find even numbers</string>
     <string name="tvQuestion4" translatable="false">x*10%+x+7=18  x=?</string>
     <string name="btnDevelopers">Developers</string>
+
     <string name="btnHelp">Help</string>
+    <string name="help_message">Are you sure you can\'t handle it on your own?</string>
+    <string name="advice">Try to answer yourself next time.</string>
+    <string name="help1">A prime number is a natural number greater
+        than 1 that cannot be formed by multiplying two smaller natural numbers.
+        A natural number greater than 1 that is not prime is called a composite number.
+        For example, 5 is prime because the only ways of writing it
+        as a product, 1 × 5 or, involve 5 itself.</string>
+    <string name="help2" translatable="false">3,5,1</string>
+    <string name="help3" translatable="false">22,10</string>
+    <string name="help4" translatable="false">10</string>
+
     <string name="btnNum1">3</string>
     <string name="btnNum2">10</string>
     <string name="btnNum3">7</string>
@@ -13,12 +25,11 @@
     <string name="btnNum5">22</string>
     <string name="btnNum6">1</string>
     <string name="tstDev">Pateev,Egorkin,Imarov</string>
-    <string name="tstHelp">A prime number is a natural number greater
-        than 1 that cannot be formed by multiplying two smaller natural numbers.
-        A natural number greater than 1 that is not prime is called a composite number.
-        For example, 5 is prime because the only ways of writing it
-        as a product, 1 × 5 or, involve 5 itself.</string>
+
+
     <string name="tstTrue">Correct!</string>
     <string name="tstFalse">Wrong!</string>
-
+    <string name="nextbutton">next</string>
+    <string name="helpOn">Help button On</string>
+    <string name="helpOff">Help button Off</string>
 </resources>
